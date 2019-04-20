@@ -82,5 +82,37 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-  
+  console.log(array);
+  let noDuplicate_array = array.filter(function(elem, index, self){
+    return index == self.indexOf(elem);
+  })
+  return cb(noDuplicate_array);
 }
+
+
+removeDuplicates(items, function(dupeFreeArray) { 
+  console.log(dupeFreeArray);
+});
+
+
+//  let noDuplicate_array = array.filter(function(elem, index, self){
+//    console.log(self.indexOf(elem));
+//     return index == self.indexOf(elem);
+//  })
+//   // console.log(noDuplicate_array);
+//   return cb(noDuplicate_array);
+// }
+
+
+removeDuplicates(items, function(dupeFreeArray) { 
+  console.log(dupeFreeArray);
+});
+// function removeDuplicateUsingFilter(arr){
+//     let unique_array = arr.filter(function(elem, index, self) {
+//       // console.log(`This is the index ${self.indexOf(elem)}`);
+//       // console.log(`The loop index is the  ${index}`);
+//         return index == self.indexOf(elem);
+//     });
+//   // console.log(`outside filter  ${unique_array}`);
+//     return unique_array
+// }
