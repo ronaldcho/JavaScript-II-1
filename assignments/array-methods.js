@@ -93,6 +93,18 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+// Problem 1
+// let heighest_donner = [];
+
+// runners.filter(char => {
+//     char.shirt_size === "L" ? largeShirts.push(`${char.first_name} ${char.last_name}`) : char.shirt_size
+// })
+console.log("#####################################################")
+// console.log(largeShirts);
+const highdonners = runners.filter((dooner) => {
+    return dooner.donation >= 200;
+});
+
 // Problem 2
 
 // Problem 3
