@@ -108,3 +108,29 @@ const highdonners = runners.filter((dooner) => {
 // Problem 2
 
 // Problem 3
+
+let totalShirtsBySize = [];
+let countShirtsBySize = [];
+shirtsBySize = [...new Set(runners.map(runner => runner.shirt_size))];
+shirtsBySize.forEach(x => {
+    countShirtsBySize.push(runners.filter(runner =>{
+       return runner.shirt_size === x;
+    }))
+});
+
+countShirtsBySize.forEach(x => {
+    totalShirtsBySize.push(x[0].shirt_size + ' ' + x.length);
+})
+console.log(totalShirtsBySize);
+// Problem 2
+let emailList =[];
+emailList.push(runners.map(runner => runner.email));
+console.log(emailList);
+// Problem 3
+
+// Problem 3 
+let nameDonation =[];
+runners.forEach(runner => {
+    nameDonation.push(`${runner.first_name} ${runner.donation}`);
+});
+console.log(nameDonation); 
